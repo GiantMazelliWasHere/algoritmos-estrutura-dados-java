@@ -24,8 +24,8 @@ public class Ex04 {
                     System.out.println("Número removido: " + numeroParaRemover);
                     System.out.println("Lista atual: " + numeros);
                 } else {
-                System.out.println("Número não encontrado na lista.");
-                System.out.println("Lista atual: " + numeros);
+                    System.out.println("Número não encontrado na lista.");
+                    System.out.println("Lista atual: " + numeros);
                 }
             } else {
                 System.out.println("Opção inválida.");
