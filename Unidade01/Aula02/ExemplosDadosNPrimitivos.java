@@ -1,5 +1,3 @@
-package Unidade01.Aula02;
-
 public class ExemplosDadosNPrimitivos {
     public static void main(String[] args) {
         //tipo caracter PRIMITIVO

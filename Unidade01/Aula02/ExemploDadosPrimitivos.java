@@ -1,5 +1,3 @@
-package Unidade01.Aula02;
-
 public class ExemploDadosPrimitivos{
     public static void main(String[] args){
         // numericos inteiros

@@ -1,5 +1,3 @@
-package Unidade01.Aula03;
-
 import java.util.Scanner;
 
 public class ArraysMatrizes {
