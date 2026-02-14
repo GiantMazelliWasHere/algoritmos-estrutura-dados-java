@@ -29,11 +29,11 @@ public class Ex06_Un02 {
         addFila(fila, "Elemento 1");
         addFila(fila, "Elemento 2");
         addFila(fila, "Elemento 3");
-        System.out.println("Fila após adição de elementos:");
+        System.out.println("Fila apos adiçao de elementos:");
         exibirFila(fila);
         System.out.println("\nRemovendo elementos da fila:");
         removeFila(fila);
-        System.out.println("\nFila após remoção de um elemento:");
+        System.out.println("\nFila após remoçao de um elemento:");
         exibirFila(fila);
     }
 }

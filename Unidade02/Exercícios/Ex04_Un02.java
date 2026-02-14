@@ -21,17 +21,19 @@ public class Ex04_Un02 {
             }
         }
         
-        if (!pilha.isEmpty()){
-            System.out.println("Expressao esta desbalanceada.");
-        } else {
-            System.out.println("Expressao esta balanceada.");
-        }
-
         return pilha.isEmpty();
     }
 
+    public static void imprimirResultado(boolean balanceada) {
+        if (balanceada) {
+            System.out.println("A expressao esta balanceada.");
+        } else {
+            System.out.println("A expressao nao esta balanceada.");
+        }
+    }
     public static void main(String[] args) {
         String expressao = "((a + b) * (c - d))";
-        estaBalanceada(expressao);        
+        boolean balanceada = estaBalanceada(expressao);
+        imprimirResultado(balanceada);
     }
 }
