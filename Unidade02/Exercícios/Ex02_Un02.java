@@ -34,6 +34,7 @@ public class Ex02_Un02 {
         array.add(4);
         array.add(4);
         array.add(5);
+        array.add(5);
 
         printArray("Array original: ", array);
         System.out.println("Array sem duplicados: ");
