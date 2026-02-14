@@ -38,7 +38,7 @@ class Pessoa {
     }
 }
 
-public class Ex09 {
+public class Ex09_Un01 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Pessoa[] listaDePessoas = null;

@@ -1,4 +1,4 @@
-public class Ex05 {
+public class Ex05_Un01 {
     public static void main(String[] args) {
         int[][] matriz = {
             {1, 2, 3},

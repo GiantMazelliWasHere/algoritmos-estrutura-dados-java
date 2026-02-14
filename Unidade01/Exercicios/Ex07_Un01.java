@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex07 {
+public class Ex07_Un01 {
     public static void main(String[] args) {
         char[][] tabuleiro = new char[3][3];
         inicializarTabuleiro(tabuleiro);

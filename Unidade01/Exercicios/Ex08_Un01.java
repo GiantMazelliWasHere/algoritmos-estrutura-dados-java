@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex08 {
+public class Ex08_Un01 {
     static int[] numeros = new int[10];
     
     public static void main(String[] args) {

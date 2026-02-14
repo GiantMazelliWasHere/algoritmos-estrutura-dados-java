@@ -1,4 +1,4 @@
-public class Ex06 {
+public class Ex06_Un01 {
     public static void main(String[] args) {
         for (int i = 2; i <= 100; i++){
             boolean primo = true;

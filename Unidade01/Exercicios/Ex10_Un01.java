@@ -39,7 +39,7 @@ class Produto {
     }
 }
 
-public class Ex10 {
+public class Ex10_Un01 {
     public static void main(String[] args) {
         Produto[] estoque = null;
         Scanner sc = new Scanner(System.in);
@@ -86,7 +86,7 @@ public class Ex10 {
                 }
                 System.out.print("Digite o nome do produto a atualizar: ");
                 String nome = sc.nextLine();
-                new Ex10().atualizarProduto(estoque, nome);
+                new Ex10_Un01().atualizarProduto(estoque, nome);
 
             } else if (escolha == 5) {
                 if (estoque == null) {
