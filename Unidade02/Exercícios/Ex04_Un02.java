@@ -15,7 +15,7 @@ public class Ex04_Un02 {
                     return false;
                 }
                 char topo = pilha.pop();
-                if ((c == ')' && topo != '(')){
+                if ((topo != '(' && c == ')')){ 
                     return false;
                 }
             }
@@ -26,6 +26,7 @@ public class Ex04_Un02 {
         } else {
             System.out.println("Expressao esta balanceada.");
         }
+
         return pilha.isEmpty();
     }
 
