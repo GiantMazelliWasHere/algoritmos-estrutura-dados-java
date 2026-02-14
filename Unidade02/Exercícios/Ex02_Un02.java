@@ -4,7 +4,6 @@ public class Ex02_Un02 {
     public static void removerDuplicados(ArrayList<Integer> array) {
         int n = array.size();
         ArrayList<Integer> temp = new ArrayList<>();
-        int j = 0;
 
         for (int i = 0; i < n - 1; i++) {
             if (array.get(i) != array.get(i + 1)) {
@@ -14,7 +13,7 @@ public class Ex02_Un02 {
         temp.add(array.get(n - 1));
 
         for (int i = 0; i < temp.size(); i++) {
-            System.out.print(temp.get(i)                                                     + " ");
+            System.out.print(temp.get(i) + " ");
         }
     }
 
