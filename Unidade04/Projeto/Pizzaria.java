@@ -2,6 +2,7 @@ package Projeto;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 import Projeto.Pizza.TamanhoPizza;
@@ -11,6 +12,13 @@ public class Pizzaria {
         Scanner scanner = new Scanner(System.in);
         List<Cliente> listaClientes = new ArrayList<>();
         List<Pedido> listaPedidos = new ArrayList<>();
+        Map<String, Integer> cidadesEntrega = Map.of(
+            "Centro", 2,
+            "Zona Sul", 5,
+            "Zona Norte", 7,
+            "Zona Leste", 10,
+            "Zona Oeste", 12
+        );
 
 
         boolean continuar = true;
@@ -37,7 +45,7 @@ public class Pizzaria {
                     alterarPedido(scanner, listaPedidos);
                     break;
                 case 3:
-                    finalizarPedido(scanner, listaPedidos);
+                    finalizarPedido(scanner, listaPedidos, cidadesEntrega);
                     continuar = false;
                     break;
                 case 4:
@@ -257,10 +265,24 @@ public class Pizzaria {
         
     }
 
-    private static void finalizarPedido(Scanner scanner, List<Pedido> listaPedidos) {
-        System.out.print("Informe a distância da entrega em KMs: ");
-        double km = scanner.nextDouble();
-        
+    private static void finalizarPedido(Scanner scanner, List<Pedido> listaPedidos, Map<String, Integer> cidades) {
+        int x = 1;
+        for (String zona : cidades.keySet()) {
+            System.out.println(x + ". " + zona);
+            x++;
+        }
+        System.out.print("Informe a zona de entrega: ");
+        int opcao = scanner.nextInt();
+        scanner.nextLine();
+        String zonaEntrega = (String) cidades.keySet().toArray()[opcao - 1];
+
+        if (!cidades.containsKey(zonaEntrega)) {
+            System.out.println("Zona de entrega inválida.");
+            return;
+        }
+
+        int km = cidades.get(zonaEntrega);
+
         for (Pedido pedido : listaPedidos) {
             double frete = pedido.calcularFrete(km);
             double totalPizzas = pedido.getValorTotal();

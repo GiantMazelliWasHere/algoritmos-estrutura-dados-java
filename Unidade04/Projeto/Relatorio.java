@@ -55,24 +55,24 @@ public class Relatorio {
     }
 
     public void exibirRelatorio() {
-    System.out.println("\n========== RELATÓRIO DE VENDAS (GRAFOS) ==========");
-    System.out.printf("Faturamento Total: R$ %.2f\n", faturamentoTotal);
-    
-    System.out.println("\n--- Sabores Mais Pedidos ---");
-    contagemSabores.entrySet().stream()
-        .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
-        .forEach(e -> System.out.println(e.getKey() + ": " + e.getValue() + " vezes"));
+        System.out.println("\n========== RELATÓRIO DE VENDAS (GRAFOS) ==========");
+        System.out.printf("Faturamento Total: R$ %.2f\n", faturamentoTotal);
+        
+        System.out.println("\n--- Sabores Mais Pedidos ---");
+        contagemSabores.entrySet().stream()
+            .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
+            .forEach(e -> System.out.println(e.getKey() + ": " + e.getValue() + " vezes"));
 
-    System.out.println("\n--- Ligações entre Sabores (Mesma Pizza) ---");
-   
-    for (int i = 0; i < matrizAdjacencia.length; i++) {
-        for (int j = i + 1; j < matrizAdjacencia[i].length; j++) {
-            if (matrizAdjacencia[i][j] > 0) {
-                System.out.println("[ " + indiceParaSabor.get(i) + " ] <---> [ " + 
-                                   indiceParaSabor.get(j) + " ] | Ocorrências: " + matrizAdjacencia[i][j]);
+        System.out.println("\n--- Ligações entre Sabores (Mesma Pizza) ---");
+    
+        for (int i = 0; i < matrizAdjacencia.length; i++) {
+            for (int j = i + 1; j < matrizAdjacencia[i].length; j++) {
+                if (matrizAdjacencia[i][j] > 0) {
+                    System.out.println("[ " + indiceParaSabor.get(i) + " ] <---> [ " + 
+                                    indiceParaSabor.get(j) + " ] | Ocorrências: " + matrizAdjacencia[i][j]);
+                }
             }
         }
+        System.out.println("==================================================\n");
     }
-    System.out.println("==================================================\n");
-}
 }
