@@ -1,15 +1,17 @@
 import java.util.List;
 import java.util.Map;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Ex05_Un03 {
     private Map<String, List<Aresta>> adjacencias;
 
     public Ex05_Un03() {
-        adjacencias = new java.util.HashMap<>();
+        adjacencias = new HashMap<>();
     }
 
     public void addVertice(String rotulo) {
-        adjacencias.put(rotulo, new java.util.ArrayList<>());
+        adjacencias.put(rotulo, new ArrayList<>());
     }
 
     public void addArtesta(String origem, String destino, int peso) {
