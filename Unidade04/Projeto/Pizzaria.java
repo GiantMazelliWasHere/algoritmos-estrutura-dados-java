@@ -38,6 +38,7 @@ public class Pizzaria {
                     break;
                 case 3:
                     finalizarPedido(scanner, listaPedidos);
+                    continuar = false;
                     break;
                 case 4:
                     listaClientes.add(adicionarCliente(scanner));
@@ -219,11 +220,23 @@ public class Pizzaria {
                     break;
 
                 case 3:
+                    Cardapio cardapioAlt = new Cardapio();
+                    List<String> saboresListAlt = new ArrayList<>();
+                    int y = 1;
+
                     pedidoEncontrado.listarSaboresDoPedido();
                     System.out.print("Digite o nome do sabor que deseja trocar: ");
                     String antigo = scanner.nextLine();
                     System.out.print("Digite o novo sabor: ");
-                    String novoSabor = scanner.nextLine();
+                    for (String sabor : cardapioAlt.getCardapio().keySet()) {
+                            saboresListAlt.add(sabor);
+                            System.out.println(y + ". " + sabor);
+                            y++;
+                        }
+                    int escolha = scanner.nextInt();
+                    scanner.nextLine();
+
+                    String novoSabor = saboresListAlt.get(escolha - 1);
                     
                     if (pedidoEncontrado.alterarSaborEspecifico(antigo, novoSabor)) {
                         System.out.println("Sabor atualizado!");
