@@ -153,14 +153,16 @@ public class Pizzaria {
             return;
         }
 
-        int opcao = -1;
-        while (opcao != 0) {
+        boolean continuar = true;
+        while (continuar) {
             System.out.println("EDITANDO PEDIDO");
             System.out.println("1. Adicionar nova pizza");
             System.out.println("2. Remover pizza (por sabor)");
             System.out.println("3. Alterar um sabor específico");
             System.out.println("0. Sair e Salvar");
             System.out.print("Opção: ");
+            int opcao = scanner.nextInt();
+            scanner.nextLine();
     
             switch (opcao) {
                 case 1:
@@ -228,6 +230,13 @@ public class Pizzaria {
                     } else {
                         System.out.println("Sabor antigo não encontrado no pedido.");
                     }
+                    break;
+                case 0:
+                    continuar = false;
+                    System.out.println("Alterações salvas com sucesso!");
+                    break;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
                     break;
                 
             }
