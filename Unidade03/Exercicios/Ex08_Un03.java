@@ -66,7 +66,7 @@ public class Ex08_Un03 {
         arvore.insert(12);
         arvore.insert(18);
 
-        System.out.println("Árvore em ordem:");
+        System.out.println("Arvore em ordem:");
         arvore.percorrerEmOrdem(arvore.root);
         System.out.println("\nValor mínimo na árvore: " + arvore.encontrarMinimo());
     }
