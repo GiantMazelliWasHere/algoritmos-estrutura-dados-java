@@ -1,5 +1,3 @@
-package Unidade03.Aula03;
-
 public class BuscaLinear {
 
     static int linearSearch(int[] arr, int key){

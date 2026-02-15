@@ -1,5 +1,3 @@
-package Unidade03.Aula04;
-
 public class BuscaBinaria {
 
     static int binarySearch(int[] arr, int key) {

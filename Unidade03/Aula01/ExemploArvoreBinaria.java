@@ -1,5 +1,3 @@
-package Unidade03.Aula01;
-
 public class ExemploArvoreBinaria {
 
     Node root;
