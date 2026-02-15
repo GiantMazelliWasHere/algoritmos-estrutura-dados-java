@@ -210,9 +210,9 @@ public class Pizzaria {
                     System.out.print("Qual sabor da pizza que deseja REMOVER inteira? ");
                     String sabRemover = scanner.nextLine();
                     if (pedidoEncontrado.removerPizzaPorSabor(sabRemover)) {
-                        System.out.println("✅ Pizza removida com sucesso!");
+                        System.out.println("Pizza removida com sucesso!");
                     } else {
-                        System.out.println("⚠️ Sabor não encontrado.");
+                        System.out.println("Sabor não encontrado.");
                     }
                     break;
 
